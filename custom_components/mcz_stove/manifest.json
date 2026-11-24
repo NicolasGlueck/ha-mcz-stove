@@ -1,0 +1,14 @@
+{
+  "domain": "mcz_stove",
+  "name": "MCZ Pellet Stove (pre-Maestro)",
+  "codeowners": [
+    "@NicolasGlueck"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/NicolasGlueck/ha-mcz-stove",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/NicolasGlueck/ha-mcz-stove/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

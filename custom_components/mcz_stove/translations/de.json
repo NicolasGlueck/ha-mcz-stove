@@ -1,0 +1,114 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "MCZ-Pelletofen (vor Maestro)",
+        "description": "Für MCZ-Öfen mit dem älteren WLAN-Modul (vor Maestro). Die Verbindung läuft direkt im Heimnetz, ohne Cloud. Maestro-Öfen werden nicht unterstützt.",
+        "data": {
+          "name": "Name",
+          "host": "IP-Adresse",
+          "port": "Port"
+        },
+        "data_description": {
+          "name": "Name des Geräts in Home Assistant",
+          "host": "IP-Adresse des WLAN-Moduls im Ofen. Am besten im Router fest vergeben.",
+          "port": "Standard: 5001"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Der Ofen antwortet nicht unter dieser Adresse."
+    },
+    "abort": {
+      "already_configured": "Dieser Ofen ist schon eingerichtet."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "off": "Aus",
+          "ignition_1": "Zündung 1",
+          "ignition_2": "Zündung 2",
+          "ignition_3": "Zündung 3",
+          "ignition_4": "Zündung 4",
+          "ignition_5": "Zündung 5",
+          "ignition_6": "Zündung 6",
+          "ignition_7": "Zündung 7",
+          "heating": "Heizbetrieb",
+          "shutdown_1": "Abschalten 1",
+          "shutdown_2": "Abschalten 2",
+          "eco_stop_1": "Eco-Stopp 1",
+          "eco_stop_2": "Eco-Stopp 2",
+          "eco_stop_3": "Eco-Stopp 3",
+          "pellets_low": "Pellets fast leer",
+          "pellets_empty": "Pellets leer",
+          "power_failure": "Stromausfall",
+          "frost_protection": "Frostschutz",
+          "ignition_failed": "Zündung fehlgeschlagen",
+          "no_pellets": "Keine Pellets",
+          "door_open": "Tür offen",
+          "unknown": "Unbekannt"
+        },
+        "state_attributes": {
+          "code": {
+            "name": "Zustandscode"
+          }
+        }
+      },
+      "room_temperature": {
+        "name": "Raumtemperatur"
+      },
+      "exhaust_temperature": {
+        "name": "Abgastemperatur"
+      },
+      "target_temperature": {
+        "name": "Solltemperatur"
+      },
+      "power_level": {
+        "name": "Leistungsstufe"
+      },
+      "exhaust_fan_speed": {
+        "name": "Abgaslüfter"
+      },
+      "fan_1": {
+        "name": "Lüfter Front"
+      },
+      "fan_2": {
+        "name": "Comfort Air"
+      },
+      "fan_3": {
+        "name": "Lüfter 3"
+      },
+      "wifi_signal": {
+        "name": "WLAN-Signal"
+      }
+    },
+    "binary_sensor": {
+      "eco": {
+        "name": "Eco"
+      },
+      "timer": {
+        "name": "Zeitprogramm"
+      },
+      "problem": {
+        "name": "Störung"
+      }
+    },
+    "number": {
+      "level": {
+        "name": "Leistung einstellen"
+      },
+      "fan_1_set": {
+        "name": "Lüfter Front einstellen"
+      },
+      "fan_2_set": {
+        "name": "Comfort Air einstellen"
+      },
+      "fan_3_set": {
+        "name": "Lüfter 3 einstellen"
+      }
+    }
+  }
+}

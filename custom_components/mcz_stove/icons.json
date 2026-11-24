@@ -1,0 +1,72 @@
+{
+  "entity": {
+    "sensor": {
+      "status": {
+        "default": "mdi:fire",
+        "state": {
+          "off": "mdi:fireplace-off",
+          "shutdown_1": "mdi:fire-off",
+          "shutdown_2": "mdi:fire-off",
+          "ignition_1": "mdi:fire-alert",
+          "ignition_2": "mdi:fire-alert",
+          "ignition_3": "mdi:fire-alert",
+          "ignition_4": "mdi:fire-alert",
+          "ignition_5": "mdi:fire-alert",
+          "ignition_6": "mdi:fire-alert",
+          "ignition_7": "mdi:fire-alert",
+          "pellets_low": "mdi:alert",
+          "pellets_empty": "mdi:alert",
+          "power_failure": "mdi:alert",
+          "ignition_failed": "mdi:alert",
+          "no_pellets": "mdi:alert",
+          "door_open": "mdi:alert"
+        }
+      },
+      "power_level": {
+        "default": "mdi:fire"
+      },
+      "exhaust_fan_speed": {
+        "default": "mdi:fan"
+      },
+      "fan_1": {
+        "default": "mdi:fan"
+      },
+      "fan_2": {
+        "default": "mdi:fan"
+      },
+      "fan_3": {
+        "default": "mdi:fan"
+      }
+    },
+    "binary_sensor": {
+      "eco": {
+        "default": "mdi:leaf"
+      },
+      "timer": {
+        "default": "mdi:calendar-clock"
+      }
+    },
+    "number": {
+      "level": {
+        "default": "mdi:fire"
+      },
+      "fan_1_set": {
+        "default": "mdi:fan"
+      },
+      "fan_2_set": {
+        "default": "mdi:fan"
+      },
+      "fan_3_set": {
+        "default": "mdi:fan"
+      }
+    },
+    "switch": {
+      "power": {
+        "default": "mdi:fireplace",
+        "state": {
+          "off": "mdi:fireplace-off"
+        }
+      }
+    }
+  }
+}

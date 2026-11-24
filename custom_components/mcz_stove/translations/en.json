@@ -1,0 +1,114 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "MCZ Pellet Stove (pre-Maestro)",
+        "description": "For MCZ stoves with the older Wi-Fi module (before Maestro). Connects directly over your home network, no cloud. Maestro stoves are not supported.",
+        "data": {
+          "name": "Name",
+          "host": "IP address",
+          "port": "Port"
+        },
+        "data_description": {
+          "name": "Name of the device in Home Assistant",
+          "host": "IP address of the stove's Wi-Fi module. Best give it a fixed address in your router.",
+          "port": "Default: 5001"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "The stove does not respond at this address."
+    },
+    "abort": {
+      "already_configured": "This stove is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "off": "Off",
+          "ignition_1": "Ignition 1",
+          "ignition_2": "Ignition 2",
+          "ignition_3": "Ignition 3",
+          "ignition_4": "Ignition 4",
+          "ignition_5": "Ignition 5",
+          "ignition_6": "Ignition 6",
+          "ignition_7": "Ignition 7",
+          "heating": "Heating",
+          "shutdown_1": "Shutdown 1",
+          "shutdown_2": "Shutdown 2",
+          "eco_stop_1": "Eco stop 1",
+          "eco_stop_2": "Eco stop 2",
+          "eco_stop_3": "Eco stop 3",
+          "pellets_low": "Pellets low",
+          "pellets_empty": "Pellets empty",
+          "power_failure": "Power failure",
+          "frost_protection": "Frost protection",
+          "ignition_failed": "Ignition failed",
+          "no_pellets": "No pellets",
+          "door_open": "Door open",
+          "unknown": "Unknown"
+        },
+        "state_attributes": {
+          "code": {
+            "name": "State code"
+          }
+        }
+      },
+      "room_temperature": {
+        "name": "Room temperature"
+      },
+      "exhaust_temperature": {
+        "name": "Exhaust temperature"
+      },
+      "target_temperature": {
+        "name": "Target temperature"
+      },
+      "power_level": {
+        "name": "Power level"
+      },
+      "exhaust_fan_speed": {
+        "name": "Exhaust fan"
+      },
+      "fan_1": {
+        "name": "Front fan"
+      },
+      "fan_2": {
+        "name": "Comfort Air"
+      },
+      "fan_3": {
+        "name": "Fan 3"
+      },
+      "wifi_signal": {
+        "name": "Wi-Fi signal"
+      }
+    },
+    "binary_sensor": {
+      "eco": {
+        "name": "Eco"
+      },
+      "timer": {
+        "name": "Timer program"
+      },
+      "problem": {
+        "name": "Fault"
+      }
+    },
+    "number": {
+      "level": {
+        "name": "Power level setpoint"
+      },
+      "fan_1_set": {
+        "name": "Front fan setpoint"
+      },
+      "fan_2_set": {
+        "name": "Comfort Air setpoint"
+      },
+      "fan_3_set": {
+        "name": "Fan 3 setpoint"
+      }
+    }
+  }
+}
