@@ -7,6 +7,7 @@ It talks to the stove **directly over your home network**: no cloud, no account,
 
 [![hacs](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz/)
 [![validate](https://github.com/NicolasGlueck/ha-mcz-stove/actions/workflows/validate.yml/badge.svg)](https://github.com/NicolasGlueck/ha-mcz-stove/actions/workflows/validate.yml)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-NicolasGlueck-ffdd00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/nicolasglueck)
 
 ## Is this for my stove?
 
@@ -93,6 +94,10 @@ which helps to support other models. The IP address is removed.
 
 Field meanings are based on [hottohpy](https://github.com/benlbrm/hottohpy) by benlbrm, verified and corrected on a real MCZ stove.
 This project is not affiliated with MCZ or the maker of the Wi-Fi module.
+
+## Support
+
+If this integration saves you a few trips to the stove, you can [buy me a coffee](https://buymeacoffee.com/nicolasglueck). Thank you!
 
 ## License
 
