@@ -23,10 +23,13 @@ STATES = {
     9: "shutdown_1", 10: "shutdown_2",
     11: "eco_stop_1", 12: "eco_stop_2", 13: "eco_stop_3",
     14: "pellets_low", 15: "pellets_empty", 16: "power_failure", 17: "frost_protection",
-    60: "ignition_failed", 61: "no_pellets", 69: "door_open",
+    # MCZ alarm An is reported as state code 50 + n: A01 = 51, A02 = 52, ... (seen on a Stream Comfort Air:
+    # 51 after a failed ignition, 52 when the pellets ran out). Every code 51..99 gets its own key.
+    **{code: f"alarm_a{code - 50:02d}" for code in range(51, 100)},
 }
 STATE_UNKNOWN = "unknown"
-# pellets low/empty, power failure and the 50..99 range that the HottoH app shows as alarms
+ALARM_CODES = range(51, 100)
+# pellets low/empty, power failure and all alarm codes (50..99)
 PROBLEM_CODES = {14, 15, 16, *range(50, 100)}
 
 # Fields of the DATR0 response

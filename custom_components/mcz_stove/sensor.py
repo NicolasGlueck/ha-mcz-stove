@@ -29,6 +29,7 @@ from .const import (
     F_ROOM_TEMP,
     F_STATE,
     F_TARGET_TEMP,
+    ALARM_CODES,
     STATE_UNKNOWN,
     STATES,
     fan_fields,
@@ -127,5 +128,9 @@ class HottohSensor(HottohEntity, SensorEntity):
     @property
     def extra_state_attributes(self) -> dict[str, Any] | None:
         if self.entity_description.key == "status":
-            return {"code": self.fields[F_STATE]}
+            code = self.fields[F_STATE]
+            attrs: dict[str, Any] = {"code": code}
+            if code in ALARM_CODES:
+                attrs["alarm"] = f"A{code - 50:02d}"
+            return attrs
         return None
